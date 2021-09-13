@@ -1,0 +1,14 @@
+[
+    {
+        "nazwa": "Pan Tu nie stał",
+        "model": "Antajla 8.33",
+        "opis": "Wszystkim tylko miejsce zajmuje",
+        "user.id": 1
+    },
+    {
+        "nazwa": "Kombinator",
+        "model": "Curvetta",
+        "opis": "Kombinuje jak tylko może",
+        "user.id": 2
+    }
+]
