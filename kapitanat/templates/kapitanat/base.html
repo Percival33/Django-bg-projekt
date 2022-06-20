@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{% static 'kapitanat/main.css' %}">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/external-xnimrodx-lineal-gradient-xnimrodx/64/undefined/external-boat-camping-xnimrodx-lineal-gradient-xnimrodx.png"/>
 
     {% if title %}
         <title>Django kapitanat - {{ title }}</title>
@@ -28,7 +29,7 @@
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
               <a class="nav-item nav-link" href="{% url 'kapitanat-home' %}">Strona Główna</a>
-              <a class="nav-item nav-link" href="https://www.szatanek.pl/strony/kontakt">Kontakt</a>
+              <a class="nav-item nav-link" href="#">Kontakt</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
@@ -63,16 +64,19 @@
               <p class='text-muted'> Nie lubię ziemniaków.
                 <ul class="list-group">
                   <li class="list-group-item list-group-item-light">
-                    <a href="https://www.szatanek.pl/czartery">Dostępne jachty</a>
+                    <a href="#">Dostępne jachty</a>
                   </li>
                   <li class="list-group-item list-group-item-light">
-                    <a href="https://www.szatanek.pl/czartery/cennik-czarterow">Cennik</a>
+                    <a href="#">Cennik</a>
                   </li>
                 </ul>
               </p>
             </div>
             </div>
         </div>
+        <footer>
+            <a target="_blank" href="https://icons8.com/icon/jM8jafKpKLmF/boat">Boat</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+        </footer>
     </main>
       
     <!-- Optional JavaScript -->
