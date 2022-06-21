@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-import django_heroku
+# import django_heroku
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,10 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_BG_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
+# HEROKU DEPLOYMENT
 
-ALLOWED_HOSTS = ['django-bg-project.herokuapp.com']
+DEBUG = True
+# (os.environ.get('DEBUG_VALUE') == 'True')
+# HEROKU DEPLOYMENT
 
+ALLOWED_HOSTS = []
+# 'django-bg-project.herokuapp.com'
 # Application definition
 
 INSTALLED_APPS = [
@@ -115,7 +119,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# staticfiles for heroku
+# HEROKU DEPLOYMENT
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -151,4 +157,5 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 # AWS_S3_ADDRESSING_STYLE = 'virtual'
 # AWS_S3_SIGNATURE_VERSION = 's3v4'
 
-django_heroku.settings(locals())
+# HEROKU DEPLOYMENT
+# django_heroku.settings(locals())
