@@ -28,4 +28,5 @@ On local development there are not known bugs.
 - [ ] make better readme (setup section, pictures etc)
 - [ ] add tests
 - [ ] add email confirmation on creating account
+- [ ] switch to Dockerfile
 
