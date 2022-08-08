@@ -21,18 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_BG_SECRET_KEY')
+SECRET_KEY = ""
 
-# SECURITY WARNING: don't run with debug turned on in production!
-# HEROKU DEPLOYMENT
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
-DEBUG = True
-# (os.environ.get('DEBUG_VALUE') == 'True')
-# HEROKU DEPLOYMENT
-
-ALLOWED_HOSTS = []
-# 'django-bg-project.herokuapp.com'
-# Application definition
+ALLOWED_HOSTS = ['localhost']
 
 INSTALLED_APPS = [
     'kapitanat.apps.KapitanatConfig',
@@ -156,6 +149,3 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 # AWS_S3_REGION_NAME = 'eu-north-1'
 # AWS_S3_ADDRESSING_STYLE = 'virtual'
 # AWS_S3_SIGNATURE_VERSION = 's3v4'
-
-# HEROKU DEPLOYMENT
-# django_heroku.settings(locals())
